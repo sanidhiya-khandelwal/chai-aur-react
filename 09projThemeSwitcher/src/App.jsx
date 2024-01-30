@@ -26,10 +26,12 @@ function App() {
    * Then Add themeMode selected by user
    * The dependency here is themeMode so gave that
    */
+
   useEffect(() => {
     document.querySelector('html').classList.remove('light', 'dark');
     document.querySelector('html').classList.add(themeMode)
   }, [themeMode])
+
   return (
     // providing values to wrapped up components 
     <ThemeProvider value={{ themeMode, darkTheme, lightTheme }}>

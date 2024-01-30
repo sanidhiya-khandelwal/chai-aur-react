@@ -31,7 +31,7 @@ export default function ThemeBtn() {
 /*
     * How our card component knows presence of which theme on change in button
     * onChangeBtn function has done this due to presence of states
-    * states are linked with theme.js and them.js has all values "themeMode, lightTheme, darkTheme"
+    * states are linked with theme.js and theme.js has all values "themeMode, lightTheme, darkTheme"
     * And in App.jsx we have useEffect where dependency is on "themeMode" that means if there us chnage in themeMode then useEffect will run
     * And everywhere change will take place including Card.jsx
     * We made functipnlaity with Button and contextApi did chnages to all including Card.jsx
