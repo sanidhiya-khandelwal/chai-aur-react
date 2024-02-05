@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './App.css'
 import { TodoProvider } from './contexts/TodoContext'
 
@@ -56,6 +56,37 @@ function App() {
           completed: !prevTodo.completed
         } : prevTodo))
   }
+
+  /***
+   * Local storage to get item and set item
+   * 
+   * when u get item from local storage u get it in the form of string and then u need to do JSON.parse() 
+   * when u set item in local storage u need to convert it in string format JSON.string()
+   *  
+  */
+  /**
+   * getItems to get all the items when page loads and display on UI
+   * getItems takes key so here key is "todos" we will set it as "todos" when we will set in local storage 
+   */
+  useEffect(() => {
+    const todos = JSON.parse(localStorage.getItem("todos"))
+    //if todos exists and todos.length {todo is that present in above line} JSON can also be an array, originally what is present can also be restored from JSON 
+    if (todos && todos.length) {
+      setTodos(todos)
+    }
+  }, [])
+
+  /**
+   * setItems to set the items in local storage.
+   * it takes key and value
+   * key is "todos"
+   * value is todos which we converting in JSON.stringify
+   * we will need to convert in String format with help of JSON.stringify
+   * Whenerve todos is changed this useEffect will run
+   */
+  useEffect(() => {
+    localStorage.setItem("todos", JSON.stringify(todos))
+  }, [todos])
 
   return (
     <TodoProvider value={{ todos, addTodo, updateTodo, deleteTodo, toggleComplete }}>
