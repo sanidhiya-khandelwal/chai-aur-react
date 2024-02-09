@@ -23,6 +23,6 @@ import todoReducer from '../features/todo/todoSlice'
  
 */
 
-export const store = configureStore({
+export const store = configureStore({ // we will use ths in main.jsx while providing "store" along with "provider"
     reducer: todoReducer
 })
