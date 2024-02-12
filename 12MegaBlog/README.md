@@ -69,3 +69,12 @@ why we are doing this sometimes env variables do not load and then error comes s
 create a folder with name "conf" inside "src" and thn create a file "conf.js" and import all 
 variables and convert them to string
  -->
+<!-- --------------------------------------------------------------------------- -->
+
+
+<!--                             STEP 2                                -->
+<!--                  Build authentication service with appwrite       -->
+
+
+STEP 1 : under "src" create a folder "appwrite" and inside that create one file "auth.js"
+
