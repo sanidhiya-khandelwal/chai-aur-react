@@ -86,3 +86,10 @@ So we will create one more service howver it is always said that if u have stora
 
 STEP 1 : under "src" and under a folder "appwrite" and inside that create one file    "config.js"
 
+
+<!--                               STEP 4                                     -->
+<!--                       configure redux toolkit                            -->
+"src" k andr "store" folder rkha h and uske andr "store.js" create kra h
+"src" k andr "store" folder rkha h and uske andr "authSlice.js" create kra h 
+COMPONENTS creation starts: 
+"src" k andr "components" folder create kra h and then under this created "Header" and "Footer" component and inside them we have Header.jsx ad Footer.jsx
