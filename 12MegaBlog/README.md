@@ -93,3 +93,26 @@ STEP 1 : under "src" and under a folder "appwrite" and inside that create one fi
 "src" k andr "store" folder rkha h and uske andr "authSlice.js" create kra h 
 COMPONENTS creation starts: 
 "src" k andr "components" folder create kra h and then under this created "Header" and "Footer" component and inside them we have Header.jsx ad Footer.jsx
+
+
+
+<!--                               STEP 5                                     -->
+<!--                       building react components                            -->
+under "src" folder..create "pages" folder 
+
+ste1-> created "container" folder inside "components" folder and inside that we created "container.jsx" 
+ste2 footer ka cod just copy paste and import link and logo(first create logo compnent) 
+step 3 Header...yh thodasa optional h means ki kya dikhana kya nhi..example logout sbko nhi dikhana only to persons who're logged in
+
+Header folder k andr create "LogoutBtn.jsx" we did make completely thi compnent
+Header.jsx k andr ki coding
+Button.jsx ko bnakr ..hr jagah use krenge
+input.jsx ko bnakr ..hr jagah use krenge (we discussed forwardRef() here)
+
+Advance React interview question
+forwardRef ka example->
+we will create one login form
+login form k andr alg input fields h & same input field hum username,password,email
+sb jagah use krenge toh input compont alg h
+login page khi or h
+but input ki state ka access toh mujhe form m chhaiye toh hume refernce dena padega form k andr
