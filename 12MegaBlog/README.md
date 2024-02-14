@@ -78,3 +78,11 @@ variables and convert them to string
 
 STEP 1 : under "src" create a folder "appwrite" and inside that create one file "auth.js"
 
+<!--                               STEP 3                                     -->
+<!--                 Appwrite database, file upload and custom queries        -->
+
+Blog k andr images bhi upload ho rhi h & DB k andr kuch collections m values bhi jaa rhi h
+So we will create one more service howver it is always said that if u have storage(a.k.a storage) service then create that service in different file so that it can be reused But right now we will mix both but we can always restructure our app such that humari jo bucket services h unko alg nikal ske 
+
+STEP 1 : under "src" and under a folder "appwrite" and inside that create one file    "config.js"
+
