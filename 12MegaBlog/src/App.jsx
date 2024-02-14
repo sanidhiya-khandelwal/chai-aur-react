@@ -29,7 +29,7 @@ function App() {
           dispatch(logout()) //or agr nhi h userData toh hum state toh update kr hi denge by dispatching logout()
         }
       })
-      .finally(() => setLoading(false)) //finally toh hr br chalega hi & hum yha bhi cll abck pass krkr setLoading(false) pass krkr, hum apni loading state ko update krdenge
+      .finally(() => setLoading(false)) //finally toh hr br chalega hi & hum yha bhi call abck pass krkr setLoading(false) pass krkr, hum apni loading state ko update krdenge
   }, [])
   // conditional rendering kri
   return !loading ?
