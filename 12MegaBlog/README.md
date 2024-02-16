@@ -116,3 +116,19 @@ login form k andr alg input fields h & same input field hum username,password,em
 sb jagah use krenge toh input compont alg h
 login page khi or h
 but input ki state ka access toh mujhe form m chhaiye toh hume refernce dena padega form k andr
+
+<!--                                        STEP 6                                          -->
+<!--                              use React hook form in production                         -->
+-creating "Select.jsx" inside "src"->"componenents"
+-creating PostCard.jsx inside "src"->"componenents"
+    jb hum logged in rhte h toh hume cards dikh rhe the and that cards ko click krkr we can go thru whole blog, so that card is PostCard.jsx, ise hi click krkr hum iske andr jaenge
+-Login.jsx
+    we will use REACT HOOK FORM & we installed this earlier
+    documntation: https://react-hook-form.com/
+
+    register ...form handling krta h
+    handleSubmit toh ek function h jo bnnana hi pdta h
+-Signup.jsx
+-AuthLayout.jsx-> y ek mechanism h ki kis tarah se pages ko ya routing ko protect kra jaata h 
+it is like a container which will decide ki value show krni h ya nhi
+Creatd an function with name "Protected"
