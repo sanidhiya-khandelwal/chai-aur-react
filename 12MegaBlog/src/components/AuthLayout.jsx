@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { UseSelector, useSelector } from 'react-redux'
+import { useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 /**
  * file ka name and function name differnt ho skta h

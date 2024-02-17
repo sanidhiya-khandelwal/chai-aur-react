@@ -150,3 +150,10 @@ hum ek inputForm ko track krenge and uske basis pr ek slug ko design krenge...kh
 
 -RTE.jsx
 -inside "component" folder create one more folder "post-form" and inside that create one more file "PostForm.jsx"
+
+<!--                                                          STEP 8                                       -->
+<!--                                                     Building pages                                    -->
+
+-create Signup.jsx,Login.jsx,Addpost.jsx,AllPosts.jsx,EditPost.jsx,Home.jsx,Post.jsx  inside "pages" folder
+
+-Routing

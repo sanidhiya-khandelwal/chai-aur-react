@@ -8,6 +8,7 @@ import { useForm } from "react-hook-form";
 
 
 function Login() {
+    console.log('hi');
     const dispatch = useDispatch();
     const navigate = useNavigate();
     /**
@@ -97,5 +98,5 @@ function Login() {
     )
 }
 
-export default Login
+export default Login;
 
