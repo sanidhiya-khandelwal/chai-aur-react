@@ -132,3 +132,21 @@ but input ki state ka access toh mujhe form m chhaiye toh hume refernce dena pad
 -AuthLayout.jsx-> y ek mechanism h ki kis tarah se pages ko ya routing ko protect kra jaata h 
 it is like a container which will decide ki value show krni h ya nhi
 Creatd an function with name "Protected"
+
+
+<!--                                STEP 7                              -->
+<!--                    Adding form and slug values                     -->
+
+we'll discuss here about Real Time Editor, it is easy to use but there is one problem here as well. Till now we were making one InputBox separately and jb hum form bna rhe the tb hum inputBox ko le rhe the and jo humara hook h "Forward" waala vo seedhe seedhe kaam kr rha tha
+i.e reference de rha tha parent k andr toh hume kuch krna hi nhi pdh rha tha sb kaam apne aap ho rha tha
+
+Ab yha bhi humare pass same problem h ...jo RTE h vo toh ek separate component bnega ya toh usey aap wrap kro pure FORWARD waale hook k andr and fr aap uska  access lijiye BUT since here
+we've reack-hook-form here also we have same technique but how to do that we will see here...
+
+We'll design form intrestingly coz this same form, submit k bhi kaam aaega, edit k bhi kaam aaega, exactly same content hi toh h jb edit krna h toh saari values load krkr usey de do and nya create krna h toh empty values dedo and also we'll see about slug ki kese hum....also hum
+useEffect ka example lenege and y example interview m bhi pucha jaata h
+
+hum ek inputForm ko track krenge and uske basis pr ek slug ko design krenge...khi pr bhi ek space add krta h toh hum uske basis pr ek DASH add krdenge 
+
+-RTE.jsx
+-inside "component" folder create one more folder "post-form" and inside that create one more file "PostForm.jsx"
