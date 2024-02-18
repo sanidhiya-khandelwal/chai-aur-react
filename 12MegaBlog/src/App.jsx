@@ -4,6 +4,7 @@ import authService from './appwrite/auth'
 import { login, logout } from './store/authSlice'
 import { Header, Footer } from './components'
 import './App.css'
+import { Outlet } from 'react-router-dom'
 
 function App() {
   /**
@@ -38,7 +39,7 @@ function App() {
         <div className='w-full block'>
           <Header />
           <main> {/*"Outlet" react router ka part h y*/}
-            TODO: {/* <Outlet /> */}
+            TODO: <Outlet />
           </main>
           <Footer />
         </div>
