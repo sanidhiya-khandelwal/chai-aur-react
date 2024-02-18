@@ -13,8 +13,8 @@ function LogoutBtn() {
      * with the help of "dispatch" function and it is just updating the state & th logout that
      * we're calling is a reducer
      */
-    const logoutHandler = () => {
-        authService.logout().then(() => { //authService.logout() it returns a promise so we can use .then also we can us after .catch() as well like this ...  .then().catch()
+    const logoutHandler = async () => {
+        await authService.logout().then(() => { //authService.logout() it returns a promise so we can use .then also we can us after .catch() as well like this ...  .then().catch()
             dispatch(logout())
         })
     }
