@@ -35,7 +35,7 @@ function Home() {
                     {posts.map((post) => (
                         <div key={post.$id} className='p-2 w-1/4'>
                             {/* <PostCard {...post} /> */} {/*aise hi bhi likh skte h spread krkr */}
-                            <PostCard post={post} />
+                            <PostCard {...post} /> {/*PostCard m values spread krkr le rh h toh do bhi spread krkr*/}
                         </div>
                     ))}
                 </div>
