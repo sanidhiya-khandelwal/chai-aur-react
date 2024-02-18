@@ -22,7 +22,7 @@ function PostForm({ post }) {
     })
 
     const navigate = useNavigate();
-    const userData = useSelector(state => state.user.userData);
+    const userData = useSelector(state => state.auth.userData);
     /**
      * agr user n form submit krdia toh kya krna h ?
      * agr user n form submit kra h toh user n "data" toh dia hi hoga...humne dekha h ki react-hook-form h vha pr hume ek "data" mil jaata h as an object jo register krkr hum le lete h toh phl hum submit naam ka k form bnate h
