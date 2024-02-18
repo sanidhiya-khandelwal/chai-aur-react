@@ -1,9 +1,10 @@
 import React, { useCallback, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
-import { Button, Input, Select, RTE } from '../index';
+import { Input, Select, RTE } from '../index';
 import appwriteService from "../../appwrite/config";
 import { useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux'; //kuki info chahiye hogi
+import { Button } from '../index';
 
 function PostForm({ post }) {
     // watch=>watching capabalities bhi deta h useForm, ki kisi bhi field ko continuolsy monitor krna h toh watching capabilites bhi milti h...aap kisi bhi form k saath watch lga skte h 
@@ -18,19 +19,22 @@ function PostForm({ post }) {
             slug: post?.slug || '',
             content: post?.content || '',
             status: post?.status || 'active', //by default active show kr rhe hum
-        }
-    })
+        },
+    });
 
     const navigate = useNavigate();
-    const userData = useSelector(state => state.auth.userData);
+    const userData = useSelector((state) => state.auth.userData);
     /**
      * agr user n form submit krdia toh kya krna h ?
      * agr user n form submit kra h toh user n "data" toh dia hi hoga...humne dekha h ki react-hook-form h vha pr hume ek "data" mil jaata h as an object jo register krkr hum le lete h toh phl hum submit naam ka k form bnate h
      * ab 2 cases h .. ya toh post ki value h already..toh hume sirf update krna pdta h AGR value nhi h toh hum ek nyi entry create krenge  
     */
     const submit = async (data) => { //react-hook-forms m acchi baat yh h ki yh "data" accept krta h agr aap by default aise bnate toh bht mhnt lgti h
+        console.log("data ", data);
+        console.log("post ", post);
+        console.log("userData ", userData);
         if (post) { //agr post h aapke pass toh hum sirf update hi toh krenege post..sbse phle hum update m file ko handle krenge and jiske liye uploadfile humne already bna rkha h 
-            const file = data.image[0] ? appwriteService.uploadFile(data.image[0]) : null;//data hume access deta h images ka  vese toh ek array hota h and hum muliple imags bhi le skte h but hum is tarah se lenge i.e first image lenge,, agr image h toh appwrite use krkr uploadFile kro nhi toh null kro 
+            const file = data.image[0] ? await appwriteService.uploadFile(data.image[0]) : null;//data hume access deta h images ka  vese toh ek array hota h and hum muliple imags bhi le skte h but hum is tarah se lenge i.e first image lenge,, agr image h toh appwrite use krkr uploadFile kro nhi toh null kro 
 
             if (file) {
                 appwriteService.deleteFile(post.featuredImage); //purani file delete kr rhe after getting new file uploaded 
@@ -47,7 +51,7 @@ function PostForm({ post }) {
         }
         else { //agr post nhi h toh means new post creat kr rhe ho and kuch update krne ko nhi h 
             // sbse phl file upload krenge..again good practice
-            const file = data.image[0] ? appwriteService.uploadFile(data.image[0]) : null;
+            const file = data.image[0] ? await appwriteService.uploadFile(data.image[0]) : null;
 
             if (file) {
                 const fileId = file.$id;

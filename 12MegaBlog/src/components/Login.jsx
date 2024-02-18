@@ -23,7 +23,9 @@ function Login() {
             const session = await authService.login(data); //await krna padega kuki upr async lga rkha h..data k andr pura object h toh vo hi jaega and jo bhi response aata h vo aata h ek session toh usey ek variable m store kr lia
             // agr session h toh user logged in and if session nhi h toh user logged in nhi h 
             if (session) {
+                console.log("session", session);
                 const userData = await authService.getCurrentUser(); //agr usr logged in toh user Data chhaiye h hume vo niklega "getCurrentUser" and it is always "await"
+                console.log("login userdata", userData);
                 if (userData) dispatch(authLogin(userData)); //agr user data aaya h toh hume dipatch krna padega and while doing tht login m status... true hojaega and  state.userData m value set ho jaegi
                 navigate("/")// or jb session h toh we can use "navigate" to navigate to root page, link use krte toh vo khud s nhi hota redirect , click krna pdta h.. navigate se aap programmatically aap usey khi or bhej skte ho 
             }
