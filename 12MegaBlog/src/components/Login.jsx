@@ -1,6 +1,6 @@
 import React, { useState } from 'react'; //useState to display errors
 import { Link, useNavigate } from 'react-router-dom'; //"link" to make something clickable and "useNavigate" coz login k bd khi toh lekr jaana hna 
-import { login as authLogin } from '../store/authSlice'; //login ko alias name de diya and hum yha se "login" reducer use krenge 
+import { login as AuthLogin } from '../store/authSlice'; //login ko alias name de diya and hum yha se "login" reducer use krenge 
 import { Button, Input, Logo } from "./index"
 import { useDispatch } from 'react-redux';
 import authService from "../appwrite/auth";
@@ -26,7 +26,12 @@ function Login() {
                 console.log("session", session);
                 const userData = await authService.getCurrentUser(); //agr usr logged in toh user Data chhaiye h hume vo niklega "getCurrentUser" and it is always "await"
                 console.log("login userdata", userData);
-                if (userData) dispatch(authLogin(userData)); //agr user data aaya h toh hume dipatch krna padega and while doing tht login m status... true hojaega and  state.userData m value set ho jaegi
+                if (userData) {
+                    console.log('usr data presnt', userData);
+                    console.log(" dispatch(AuthLogin(userData));", dispatch(AuthLogin(userData)));
+                    dispatch(AuthLogin(userData));
+                }
+                //agr user data aaya h toh hume dipatch krna padega and while doing tht login m status... true hojaega and  state.userData m value set ho jaegi
                 navigate("/")// or jb session h toh we can use "navigate" to navigate to root page, link use krte toh vo khud s nhi hota redirect , click krna pdta h.. navigate se aap programmatically aap usey khi or bhej skte ho 
             }
 
