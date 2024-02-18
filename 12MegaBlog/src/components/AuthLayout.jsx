@@ -7,12 +7,11 @@ import { useNavigate } from 'react-router-dom'
  */
 
 export default function Protected({ children, authentication = true }) { //y 2 chiz lenge hum jo bhi ise call krega
-
     const navigate = useNavigate()
     const [loader, setLoader] = useState(true)
     // phle hum store se puchenge ki user logged in h ya nhi h , directly depend nhi krenge ki user kya pass kr rha h ussey
 
-    const authStatus = useSelector(state => state.auth.authStatus)// humne state se thru redux status nikala usr ka ki vo abhi authenticated h ya nhi
+    const authStatus = useSelector(state => state.auth.status)// humne state se thru redux status nikala usr ka ki vo abhi authenticated h ya nhi
 
     // useEffect btaga ki hum login p jaana h h ya home page pr ya fr khi or and kis kis field m chnage ho 
     //toh check krna h wapas se check in
@@ -42,4 +41,3 @@ export default function Protected({ children, authentication = true }) { //y 2 c
 
     return loader ? <h1>Loading ...</h1> : <>{children}</>
 }
-
