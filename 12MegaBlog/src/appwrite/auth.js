@@ -92,7 +92,7 @@ export class AuthService {
 const authService = new AuthService();
 
 //step 5  exporting object
-export default authService
+export default authService;
 
 /**
  * u can access any method or property using example "authService.logout"

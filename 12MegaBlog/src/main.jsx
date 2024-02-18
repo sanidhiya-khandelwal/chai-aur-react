@@ -8,6 +8,7 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import Home from './pages/Home.jsx'
 import { AuthLayout } from './components/index.js'
 
+// import AddPost from "./pages/AddPost";
 import AddPost from "./pages/AddPost";
 import Signup from './pages/Signup'
 import Login from './pages/Login'
