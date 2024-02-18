@@ -13,14 +13,20 @@ const initialState = {
 const authSlice = createSlice({
     name: "auth",
     initialState,
-    reducers: { //"reducers" ek object h.. and reducers k andr sbke pass "state" (inital state hogi isme) and "action"(isme vo data hoga jo hume update/add krna h) ka access hota h but compulsion nhi h inhe use krne ka
+    //"reducers" ek object h.. and reducers k andr sbke pass "state" (inital state hogi isme) and "action"(isme vo data hoga jo hume update/add krna h) ka access hota h but compulsion nhi h inhe use krne ka
+    reducers: {
         login: (state, action) => {
-            state.status = true; //phle toh status true krenge
-            state.userData = action.payload.userData; //userData... lhs and rhs me "userdata" name same hi h toh "action.payload" likhoge toh bhi kaam hi jaega
+            console.log("action.payload", action.payload);
+            //phle toh status true krenge
+            state.status = true;
+            //userData... lhs and rhs me "userdata" name same hi h toh "action.payload" likhoge toh bhi kaam hi jaega
+            state.userData = action.payload;
+            console.log("state.userData login", state.userData);
         },
         logout: (state) => { //yha "action" ki need nhi thi toh nhi liya
             state.status = false; //status false kra 
             state.userData = null; //userData null kra
+            console.log("state.userData logout", state.userData);
         }
     }
 })
